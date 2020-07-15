@@ -1,0 +1,13 @@
+<resources>
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:colorPrimary">@color/colorPrimary</item>
+    <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="android:colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="PurpleButton" parent="@style/Widget.AppCompat.Button.Colored">
+    <item name="colorButtonNormal">#878FE4</item>
+    <item name="colorControlHighlight">#25055E</item>
+  </style>
+
+</resources>

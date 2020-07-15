@@ -1,0 +1,9 @@
+<resources>
+  <string name="app_name">Тест приложеньки</string>
+  <string name="title_for_field_sms_setting">Введите номер телефона для смс</string>
+  <string name="placeholder_tel">7953.......</string>
+  <string name="save_url_btn">Сохр.</string>
+  <string name="placeholder_url">http://pogoda.ru/get?3451</string>
+  <string name="title_url_setting">Введите url</string>
+  <string name="save_phone_btn">Сохр.</string>
+</resources>
