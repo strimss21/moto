@@ -6,7 +6,8 @@
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   tools:context=".Settings"
-  tools:visibility="visible">
+  tools:visibility="visible"
+  >
 
  <LinearLayout
    android:layout_width="match_parent"
@@ -26,36 +27,35 @@
 
 
    <LinearLayout
+android:background="#FF71747E"
      android:id="@+id/phone_number"
      android:layout_width="match_parent"
-     android:layout_height="wrap_content"
+     android:layout_height="33dp"
      android:orientation="horizontal"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent">
+     app:layout_constraintTop_toTopOf="parent"
+     >
 
      <EditText
+       android:background="@drawable/fields_layout"
        android:id="@+id/phone_field_setting"
        android:layout_width="0dp"
        android:layout_height="match_parent"
        android:layout_weight="1"
        android:autofillHints=""
-       android:background="#BDB6B6"
        android:hint="@string/placeholder_tel"
-       android:inputType="phone"
-       android:paddingLeft="32dp"
-       android:textColor="#C81717" />
+       android:paddingStart="32dp"
+       android:textColor="#C81717"
+       android:textSize="14sp"
+       android:text=""
+       android:inputType="phone"/>
 
      <Button
        android:id="@+id/save_phone_btn"
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent"
-       android:text="@string/save_phone_btn"
        style="@style/PurpleButton"
-       android:elevation="9dp"
-       android:stateListAnimator="@null"
-       android:translationZ="9dp"
-        />
+
+       />
    </LinearLayout>
 
    <TextView
@@ -69,37 +69,41 @@
    </TextView>
 
    <LinearLayout
-     android:id="@+id/url_box_setting"
      android:layout_width="match_parent"
-     android:layout_height="wrap_content"
+     android:layout_height="33dp"
+     android:background="#71747E"
+     android:id="@+id/url_box_setting"
      android:orientation="horizontal"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
      app:layout_constraintTop_toTopOf="parent">
 
      <EditText
+       android:textSize="14sp"
+       android:background="@drawable/fields_layout"
        android:id="@+id/url_field"
        android:layout_width="0dp"
        android:layout_height="match_parent"
        android:layout_weight="1"
        android:autofillHints=""
-       android:background="#BDB6B6"
        android:hint="@string/placeholder_url"
        android:inputType="textUri"
-       android:paddingLeft="32dp"
-       android:textColor="#C81717" />
+       android:paddingStart="32dp"
+       android:textColor="#C81717"
+       />
 
      <Button
-       android:theme="@style/PurpleButton"
+       style="@style/PurpleButton"
        android:id="@+id/save_url_btn"
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent"
-       android:text="@string/save_url_btn"
-       android:elevation="9dp"
-       android:stateListAnimator="@null"
-       android:translationZ="9dp"
+
        />
    </LinearLayout>
+   <Button
+     style="@style/PurpleButton"
+     android:text="Загрузить из памяти"
+     android:id="@+id/readBtnPhoneNumber"
+
+     />
  </LinearLayout>
 
 

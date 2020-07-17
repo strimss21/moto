@@ -1,10 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".MainActivity">
- <include layout="@layout/appbar"></include>
-</androidx.constraintlayout.widget.ConstraintLayout>
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical">
+  <include
+    layout="@layout/appbar">
+  </include>
+  <GridLayout
+    android:columnCount="2"
+    android:rowCount="3"
+    android:alignmentMode="alignMargins"
+    android:columnOrderPreserved="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="14dp">
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_columnWeight="1"
+      android:layout_margin="12dp"
+      android:layout_rowWeight="1"
+      app:elevation="8dp"
+      app:cardCornerRadius="8dp"
+      >
+      <Button
+        android:id="@+id/arm_sms_btn"
+        android:text="@string/arm_sms_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_columnWeight="1"
+      android:layout_margin="12dp"
+      android:layout_rowWeight="1"
+      app:elevation="8dp"
+      app:cardCornerRadius="8dp"
+      >
+      <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/disarm_sms_btn"
+        android:text="@string/disarm_sms_btn">
+
+      </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_columnWeight="1"
+      android:layout_margin="12dp"
+      android:layout_rowWeight="1"
+      app:elevation="8dp"
+      app:cardCornerRadius="8dp"
+      >
+      <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/arm_http_btn"
+        android:text="@string/arm_http_btn">
+
+      </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_columnWeight="1"
+      android:layout_margin="12dp"
+      android:layout_rowWeight="1"
+      app:elevation="8dp"
+      app:cardCornerRadius="8dp"
+      >
+      <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/disarm_http_btn"
+        android:text="@string/disarm_http_btn">
+
+      </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_columnWeight="1"
+      android:layout_margin="12dp"
+      android:layout_rowWeight="1"
+      app:elevation="8dp"
+      app:cardCornerRadius="8dp"
+      >
+      <Button
+        android:id="@+id/arm_bluetooth_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/arm_bluetooth_btn">
+
+      </Button>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_columnWeight="1"
+      android:layout_margin="12dp"
+      android:layout_rowWeight="1"
+      app:elevation="8dp"
+      app:cardCornerRadius="8dp"
+      >
+      <Button
+        android:id="@+id/disarm_bluetooth_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/disarm_bluetooth_btn">
+
+      </Button>
+
+    </androidx.cardview.widget.CardView>
+
+  </GridLayout>
+</LinearLayout>

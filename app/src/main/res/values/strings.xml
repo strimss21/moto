@@ -6,4 +6,10 @@
   <string name="placeholder_url">http://pogoda.ru/get?3451</string>
   <string name="title_url_setting">Введите url</string>
   <string name="save_phone_btn">Сохр.</string>
+  <string name="arm_sms_btn">Поставить по СМС</string>
+  <string name="disarm_bluetooth_btn">Снять по bluetooth</string>
+  <string name="arm_bluetooth_btn">Поставить по блютуз</string>
+  <string name="disarm_http_btn">Снять по http</string>
+  <string name="arm_http_btn">Поставить по http</string>
+  <string name="disarm_sms_btn">Снять по СМС</string>
 </resources>

@@ -10,9 +10,10 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-    <activity android:name=".Settings">
+    <activity android:name="com.example.mytoolbar.Settings">
       <intent-filter>
         <action android:name=".Settings" />
+
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
@@ -20,9 +21,21 @@
     <activity android:name=".MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
+
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
+    <activity android:name="com.example.mytoolbar.test">
+      <intent-filter>
+        <action android:name=".test" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+
+
+
   </application>
 
 </manifest>

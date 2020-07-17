@@ -6,6 +6,12 @@
   </style>
 
   <style name="PurpleButton" parent="@style/Widget.AppCompat.Button.Colored">
+    <item name="android:translationZ">9dp</item>
+    <item name="android:elevation">9dp</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:text">@string/save_phone_btn</item>
+    <item name="android:background">@drawable/rectangle_border</item>
     <item name="colorButtonNormal">#878FE4</item>
     <item name="colorControlHighlight">#25055E</item>
   </style>
