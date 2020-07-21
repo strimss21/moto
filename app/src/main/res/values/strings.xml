@@ -12,4 +12,9 @@
   <string name="disarm_http_btn">Снять по http</string>
   <string name="arm_http_btn">Поставить по http</string>
   <string name="disarm_sms_btn">Снять по СМС</string>
+  <string name="title_texts_sms_setting">Введите текст для смс</string>
+  <string name="placeholder_text_for_sms_arm">для постановки на охрану</string>
+  <string name="title_sms_disarm_setting">Введите текст для смс</string>
+  <string name="placeholder_text_for_sms_disarm">для снятия с охраны</string>
+  <string name="title_texts_http_setting">Введите параметры для http</string>
 </resources>

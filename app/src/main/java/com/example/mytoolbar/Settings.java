@@ -7,30 +7,40 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.github.pinball83.maskededittext.MaskedEditText;
+
 public class Settings extends AppCompatActivity {
+
+
+
   public static final String APP_SETTINGS = "settings";
   public static final String APP_NUMBER = "phoneForModule";
   public SharedPreferences sharedPreferences;
-  Long phone ;
-  public EditText phoneField;
-  Button save_phone_btn, readBtnPhoneNumber;
+  String url;
+  String phone ;
+  public static final String urlForModule = "url";
+  public MaskedEditText phoneField;
+  public EditText url_field;
+  Button save_phone_btn, readBtnPhoneNumber, save_url_btn;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_settings);
     save_phone_btn = findViewById(R.id.save_phone_btn);
+    save_url_btn = findViewById(R.id.save_url_btn);
     phoneField   = findViewById(R.id.phone_field_setting);
+    url_field = findViewById(R.id.url_field);
+
     readBtnPhoneNumber = findViewById(R.id.readBtnPhoneNumber);
+
     save_phone_btn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        String temp = phoneField.getText().toString();
-
-          phone = Long.parseLong (temp);
-          sharedPreferences = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
+        phone = phoneField.getUnmaskedText();
+         sharedPreferences = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
           SharedPreferences.Editor editor = sharedPreferences.edit();
-          editor.putLong(APP_NUMBER, phone);
+          editor.putString(APP_NUMBER,  phone);
           editor.apply();
       }
     });
@@ -38,12 +48,26 @@ public class Settings extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         sharedPreferences = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
-        phone = sharedPreferences.getLong(APP_NUMBER, 0);
-        String phoneNumber = Long.toString(phone);
-          phoneField.setText( phoneNumber);
-
+        phone = sharedPreferences.getString(APP_NUMBER, "");
+        String phoneNumber = phone;
+          phoneField.setMaskedText( phoneNumber);
+        url = sharedPreferences.getString(urlForModule, "");
+        url_field.setText( url);
       }
     });
+
+    save_url_btn.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+         url = url_field.getText().toString();
+        sharedPreferences = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(urlForModule, url);
+        editor.apply();
+      }
+    });
+
+
 
 }
  }

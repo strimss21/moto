@@ -10,6 +10,7 @@
   >
 
  <LinearLayout
+
    android:layout_width="match_parent"
    android:layout_height="wrap_content"
    android:orientation="vertical"
@@ -19,37 +20,37 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:text="@string/title_for_field_sms_setting"
-       android:background="@color/colorAccent"
+       android:background="#456A67"
        android:textAlignment="center"
-       android:textColor="#000000"
+       android:textColor="#FFF"
        android:textStyle="bold">
      </TextView>
 
 
    <LinearLayout
-android:background="#FF71747E"
      android:id="@+id/phone_number"
      android:layout_width="match_parent"
      android:layout_height="33dp"
+     android:background="#FF71747E"
      android:orientation="horizontal"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent"
-     >
+     app:layout_constraintTop_toTopOf="parent">
+     <com.github.pinball83.maskededittext.MaskedEditText
 
-     <EditText
        android:background="@drawable/fields_layout"
        android:id="@+id/phone_field_setting"
        android:layout_width="0dp"
        android:layout_height="match_parent"
        android:layout_weight="1"
-       android:autofillHints=""
+       android:inputType="number"
+       app:mask="+ *(***)*** **-**"
+       app:notMaskedSymbol="*"
+       app:maskIconColor="@color/colorPrimary"
        android:hint="@string/placeholder_tel"
        android:paddingStart="32dp"
        android:textColor="#C81717"
-       android:textSize="14sp"
-       android:text=""
-       android:inputType="phone"/>
+       android:textSize="14sp"/>
 
      <Button
        android:id="@+id/save_phone_btn"
@@ -64,7 +65,7 @@ android:background="#FF71747E"
      android:text="@string/title_url_setting"
      android:background="#456A67"
      android:textAlignment="center"
-     android:textColor="#FFF1F1"
+     android:textColor="#FFF"
      android:textStyle="bold">
    </TextView>
 
@@ -79,6 +80,7 @@ android:background="#FF71747E"
      app:layout_constraintTop_toTopOf="parent">
 
      <EditText
+
        android:textSize="14sp"
        android:background="@drawable/fields_layout"
        android:id="@+id/url_field"
@@ -95,16 +97,147 @@ android:background="#FF71747E"
      <Button
        style="@style/PurpleButton"
        android:id="@+id/save_url_btn"
-
        />
    </LinearLayout>
-   <Button
-     style="@style/PurpleButton"
-     android:text="Загрузить из памяти"
-     android:id="@+id/readBtnPhoneNumber"
+   <!-- Settings for sms-->
+   <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="@string/title_texts_sms_setting"
+     android:background="#456A67"
+     android:textAlignment="center"
+     android:textColor="#FFF"
+     android:textStyle="bold">
+   </TextView>
 
+   <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="33dp"
+     android:background="#71747E"
+     android:id="@+id/text_sms_for_arm_box"
+     android:orientation="horizontal"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
+
+     <EditText
+       android:textSize="14sp"
+       android:background="@drawable/fields_layout"
+       android:id="@+id/text_arm_sms_field"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="1"
+       android:autofillHints=""
+       android:hint="@string/placeholder_text_for_sms_arm"
+       android:inputType="textUri"
+       android:paddingStart="32dp"
+       android:textColor="#C81717"
+       />
+
+   </LinearLayout>
+
+   <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="33dp"
+     android:background="#71747E"
+     android:id="@+id/text_sms_for_disarm_box"
+     android:orientation="horizontal"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
+
+     <EditText
+       android:textSize="14sp"
+       android:background="@drawable/fields_layout"
+       android:id="@+id/text_disarm_sms_field"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="1"
+       android:autofillHints=""
+       android:hint="@string/placeholder_text_for_sms_disarm"
+       android:inputType="textUri"
+       android:paddingStart="32dp"
+       android:textColor="#C81717"
+       />
+   </LinearLayout>
+
+   <!-- Settings for http -->
+   <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="@string/title_texts_http_setting"
+     android:background="#456A67"
+     android:textAlignment="center"
+     android:textColor="#FFF"
+     android:textStyle="bold">
+   </TextView>
+
+   <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="33dp"
+     android:background="#71747E"
+     android:id="@+id/text_http_for_arm_box"
+     android:orientation="horizontal"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
+
+     <EditText
+       android:textSize="14sp"
+       android:background="@drawable/fields_layout"
+       android:id="@+id/text_parameter_for_http_arm"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="1"
+       android:autofillHints=""
+       android:hint="@string/placeholder_text_for_sms_arm"
+       android:inputType="textUri"
+       android:paddingStart="32dp"
+       android:textColor="#C81717"
+       />
+
+   </LinearLayout>
+
+   <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="33dp"
+     android:background="#71747E"
+     android:id="@+id/text_http_for_disarm_box"
+     android:orientation="horizontal"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
+
+     <EditText
+       android:textSize="14sp"
+       android:background="@drawable/fields_layout"
+       android:id="@+id/text_parameter_for_http_disarm"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="1"
+       android:autofillHints=""
+       android:hint="@string/placeholder_text_for_sms_disarm"
+       android:inputType="textUri"
+       android:paddingStart="32dp"
+       android:textColor="#C81717"
+       />
+   </LinearLayout>
+   <!-- Settings for http. END -->
+
+   <Button
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:text="Посмотреть из памяти"
+     android:id="@+id/readBtnPhoneNumber"
      />
+
+
  </LinearLayout>
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
